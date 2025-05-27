@@ -1,6 +1,6 @@
 # Test Case Summary
 
-## adder_32Bit.v Test Case Summary
+## `adder_32Bit.v` Test Case Summary
 
 | Test # | Input A (Decimal) | Hex A        | Input B (Decimal) | Hex B        | Expected Result           | Result (Hex)  |
 |--------|--------------------|--------------|--------------------|--------------|----------------------------|---------------|
@@ -18,7 +18,7 @@
 | 12     | -Infinity          | 0xFF800000   | +Infinity          | 0x7F800000   | NaN                        | 0x7FC00000    |
 
 
-## multiplier_32Bit.v Test Case Summary
+## `multiplier_32Bit.v` Test Case Summary
 
 | Test # | Input A (Hex) | Input B (Hex) | Description                     | Expected Output (Hex) | Notes             |
 |--------|----------------|----------------|----------------------------------|------------------------|--------------------|
