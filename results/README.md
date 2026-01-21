@@ -1,8 +1,8 @@
-\# Test Case Summary
+# Test Case Summary
 
 
 
-\## `adder\_32Bit.v` Test Case Summary
+## `adder\_32Bit.v` Test Case Summary
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-\## `multiplier\_32Bit.v` Test Case Summary
+## `multiplier\_32Bit.v` Test Case Summary
 
 
 
