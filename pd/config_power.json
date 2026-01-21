@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "ALU",
+    "VERILOG_FILES": ["dir::*.v"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 20.0,
+    "SYNTH_BUFFERING": false,
+    "FP_PDN_VOFFSET": 5,
+    "FP_PDN_VPITCH": 60
+}

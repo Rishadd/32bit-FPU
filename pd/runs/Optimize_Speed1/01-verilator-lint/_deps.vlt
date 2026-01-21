@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/tmp/eb496ae6fdc746e7b7449ec892160287.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/tmp/eb496ae6fdc746e7b7449ec892160287.bb.v"

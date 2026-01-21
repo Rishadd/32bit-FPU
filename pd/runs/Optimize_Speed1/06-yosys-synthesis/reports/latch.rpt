@@ -1,0 +1,5 @@
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\adder_32bit.\man_norm' from process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+No latch inferred for signal `\adder_32bit.\exp_norm' from process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+No latch inferred for signal `\adder_32bit.\overflow_norm' from process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.

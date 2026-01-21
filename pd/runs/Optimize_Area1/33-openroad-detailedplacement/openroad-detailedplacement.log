@@ -1,0 +1,40 @@
+Reading OpenROAD database at '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-19/31-openroad-repairdesignpostgpl/ALU.odb'…
+Reading library file at '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading design constraints file at '/nix/store/ifgrnqkf6pcsk2qzdn5bai2rvd4skbbc-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5.0
+[INFO] Setting input delay to: 5.0
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          144472.6 u
+legalized HPWL         147545.2 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 3347 instances
+[INFO DPL-0021] HPWL before          147545.2 u
+[INFO DPL-0022] HPWL after           144472.6 u
+[INFO DPL-0023] HPWL delta               -2.1 %
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               240     900.86
+  Tap cell                               1525    1908.08
+  Buffer                                  180     974.68
+  Timing Repair Buffer                    307    1884.31
+  Inverter                               1315    4977.27
+  Sequential cell                         314    7983.91
+  Multi-Input combinational cell         6471   31965.66
+  Total                                 10352   50594.77
+Writing OpenROAD database to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-19/33-openroad-detailedplacement/ALU.odb'…
+Writing netlist to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-19/33-openroad-detailedplacement/ALU.nl.v'…
+Writing powered netlist to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-19/33-openroad-detailedplacement/ALU.pnl.v'…
+Writing layout to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-19/33-openroad-detailedplacement/ALU.def'…
+Writing timing constraints to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-19/33-openroad-detailedplacement/ALU.sdc'…

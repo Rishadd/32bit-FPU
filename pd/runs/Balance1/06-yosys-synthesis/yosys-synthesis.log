@@ -1,0 +1,1901 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2024  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)
+Loaded SDC plugin
+
+1. Executing Liberty frontend: /home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Imported 428 cell types from liberty file.
+[INFO] Using SDC file '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/06-yosys-synthesis/synthesis.abc.sdc' for ABC…
+
+2. Executing Verilog-2005 frontend: /mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v
+Parsing SystemVerilog input from `/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v' to AST representation.
+Storing AST representation for module `$abstract\ALU'.
+Storing AST representation for module `$abstract\adder_32bit'.
+Storing AST representation for module `$abstract\multiplier_32bit'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\ALU'.
+Generating RTLIL representation for module `\ALU'.
+
+4.1. Analyzing design hierarchy..
+Top module:  \ALU
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\multiplier_32bit'.
+Generating RTLIL representation for module `\multiplier_32bit'.
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\adder_32bit'.
+Generating RTLIL representation for module `\adder_32bit'.
+
+4.4. Analyzing design hierarchy..
+Top module:  \ALU
+Used module:     \multiplier_32bit
+Used module:     \adder_32bit
+
+4.5. Analyzing design hierarchy..
+Top module:  \ALU
+Used module:     \multiplier_32bit
+Used module:     \adder_32bit
+Removing unused module `$abstract\multiplier_32bit'.
+Removing unused module `$abstract\adder_32bit'.
+Removing unused module `$abstract\ALU'.
+Removed 3 unused modules.
+Renaming module ALU to ALU.
+
+5. Generating Graphviz representation of design.
+Writing dot description to `/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/06-yosys-synthesis/hierarchy.dot'.
+Dumping module ALU to page 1.
+
+6. Executing TRIBUF pass.
+
+7. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1. Analyzing design hierarchy..
+Top module:  \ALU
+Used module:     \multiplier_32bit
+Used module:     \adder_32bit
+
+7.2. Analyzing design hierarchy..
+Top module:  \ALU
+Used module:     \multiplier_32bit
+Used module:     \adder_32bit
+Removed 0 unused modules.
+
+8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+9. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2 in module ALU.
+Marked 2 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2 in module ALU.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1 in module ALU.
+Marked 6 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52 in module multiplier_32bit.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42 in module multiplier_32bit.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21 in module multiplier_32bit.
+Marked 6 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130 in module adder_32bit.
+Marked 10 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108 in module adder_32bit.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98 in module adder_32bit.
+Marked 1 switch rules as full_case in process $proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71 in module adder_32bit.
+Removed a total of 1 dead cases.
+
+10. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 54 redundant assignments.
+Promoted 3 assignments to connections.
+
+11. Executing PROC_INIT pass (extract init attributes).
+
+12. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rst in `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+Found async reset \rst in `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+Found async reset \rst in `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+Found async reset \rst in `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+Found async reset \rst in `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+Found async reset \rst in `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+Found async reset \rst in `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+Found async reset \rst in `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+
+13. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~21 debug messages>
+
+14. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+     1/3: $0\overflow[0:0]
+     2/3: $0\o_res_vld[0:0]
+     3/3: $0\o_res[31:0]
+Creating decoders for process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+     1/4: $0\opcode_stage1[0:0]
+     2/4: $0\i_b_stage1[31:0]
+     3/4: $0\i_a_stage1[31:0]
+     4/4: $0\i_vld_stage1[0:0]
+Creating decoders for process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+     1/3: $0\overflow[0:0]
+     2/3: $0\o_res[31:0]
+     3/3: $0\o_res_vld[0:0]
+Creating decoders for process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+     1/8: $0\is_zero_r[0:0]
+     2/8: $0\is_inf_r[0:0]
+     3/8: $0\is_nan_r[0:0]
+     4/8: $0\overflow_calc_r[0:0]
+     5/8: $0\man_final_r[22:0]
+     6/8: $0\exp_final_r[7:0]
+     7/8: $0\sign_res_r[0:0]
+     8/8: $0\i_vld_r2[0:0]
+Creating decoders for process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+     1/13: $0\is_zero_b_r[0:0]
+     2/13: $0\is_zero_a_r[0:0]
+     3/13: $0\is_inf_b_r[0:0]
+     4/13: $0\is_inf_a_r[0:0]
+     5/13: $0\is_nan_b_r[0:0]
+     6/13: $0\is_nan_a_r[0:0]
+     7/13: $0\man_b_r[23:0]
+     8/13: $0\man_a_r[23:0]
+     9/13: $0\exp_b_r[7:0]
+    10/13: $0\exp_a_r[7:0]
+    11/13: $0\sign_b_r[0:0]
+    12/13: $0\sign_a_r[0:0]
+    13/13: $0\i_vld_r[0:0]
+Creating decoders for process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+     1/3: $0\overflow[0:0]
+     2/3: $0\o_res[31:0]
+     3/3: $0\o_res_vld[0:0]
+Creating decoders for process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+     1/22: $4\overflow_norm[0:0]
+     2/22: $3\overflow_norm[0:0]
+     3/22: $9\exp_norm[7:0]
+     4/22: $9\man_norm[23:0]
+     5/22: $8\exp_norm[7:0]
+     6/22: $8\man_norm[23:0]
+     7/22: $7\exp_norm[7:0]
+     8/22: $7\man_norm[23:0]
+     9/22: $6\exp_norm[7:0]
+    10/22: $6\man_norm[23:0]
+    11/22: $5\exp_norm[7:0]
+    12/22: $5\man_norm[23:0]
+    13/22: $4\exp_norm[7:0]
+    14/22: $4\man_norm[23:0]
+    15/22: $3\exp_norm[7:0]
+    16/22: $3\man_norm[23:0]
+    17/22: $2\exp_norm[7:0]
+    18/22: $2\man_norm[23:0]
+    19/22: $2\overflow_norm[0:0]
+    20/22: $1\exp_norm[7:0]
+    21/22: $1\man_norm[23:0]
+    22/22: $1\overflow_norm[0:0]
+Creating decoders for process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+     1/7: $0\is_zero_r[0:0]
+     2/7: $0\is_inf_r[0:0]
+     3/7: $0\is_nan_r[0:0]
+     4/7: $0\exp_larger_r[7:0]
+     5/7: $0\sign_sum_r[0:0]
+     6/7: $0\sum_raw_r[24:0]
+     7/7: $0\i_vld_r2[0:0]
+Creating decoders for process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+     1/13: $0\is_zero_b_r[0:0]
+     2/13: $0\is_zero_a_r[0:0]
+     3/13: $0\is_inf_b_r[0:0]
+     4/13: $0\is_inf_a_r[0:0]
+     5/13: $0\is_nan_b_r[0:0]
+     6/13: $0\is_nan_a_r[0:0]
+     7/13: $0\man_b_r[23:0]
+     8/13: $0\man_a_r[23:0]
+     9/13: $0\exp_b_r[7:0]
+    10/13: $0\exp_a_r[7:0]
+    11/13: $0\sign_b_r[0:0]
+    12/13: $0\sign_a_r[0:0]
+    13/13: $0\i_vld_r[0:0]
+
+15. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\adder_32bit.\man_norm' from process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+No latch inferred for signal `\adder_32bit.\exp_norm' from process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+No latch inferred for signal `\adder_32bit.\overflow_norm' from process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+
+16. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ALU.\o_res' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+  created $adff cell `$procdff$463' with positive edge clock and positive level reset.
+Creating register for signal `\ALU.\o_res_vld' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+  created $adff cell `$procdff$466' with positive edge clock and positive level reset.
+Creating register for signal `\ALU.\overflow' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+  created $adff cell `$procdff$469' with positive edge clock and positive level reset.
+Creating register for signal `\ALU.\i_vld_stage1' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+  created $adff cell `$procdff$472' with positive edge clock and positive level reset.
+Creating register for signal `\ALU.\i_a_stage1' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+  created $adff cell `$procdff$475' with positive edge clock and positive level reset.
+Creating register for signal `\ALU.\i_b_stage1' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+  created $adff cell `$procdff$478' with positive edge clock and positive level reset.
+Creating register for signal `\ALU.\opcode_stage1' using process `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+  created $adff cell `$procdff$481' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\o_res' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+  created $adff cell `$procdff$484' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\o_res_vld' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+  created $adff cell `$procdff$487' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\overflow' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+  created $adff cell `$procdff$490' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\i_vld_r2' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$493' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\sign_res_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$496' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\exp_final_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$499' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\man_final_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$502' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\overflow_calc_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$505' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_nan_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$508' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_inf_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$511' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_zero_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+  created $adff cell `$procdff$514' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\i_vld_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$517' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\sign_a_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$520' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\sign_b_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$523' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\exp_a_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$526' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\exp_b_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$529' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\man_a_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$532' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\man_b_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$535' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_nan_a_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$538' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_nan_b_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$541' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_inf_a_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$544' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_inf_b_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$547' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_zero_a_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$550' with positive edge clock and positive level reset.
+Creating register for signal `\multiplier_32bit.\is_zero_b_r' using process `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+  created $adff cell `$procdff$553' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\o_res' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+  created $adff cell `$procdff$556' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\o_res_vld' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+  created $adff cell `$procdff$559' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\overflow' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+  created $adff cell `$procdff$562' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\i_vld_r2' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$565' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_nan_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$568' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_inf_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$571' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_zero_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$574' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\sum_raw_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$577' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\sign_sum_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$580' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\exp_larger_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+  created $adff cell `$procdff$583' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\i_vld_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$586' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\sign_a_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$589' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\sign_b_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$592' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\exp_a_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$595' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\exp_b_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$598' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\man_a_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$601' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\man_b_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$604' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_nan_a_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$607' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_nan_b_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$610' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_inf_a_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$613' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_inf_b_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$616' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_zero_a_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$619' with positive edge clock and positive level reset.
+Creating register for signal `\adder_32bit.\is_zero_b_r' using process `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+  created $adff cell `$procdff$622' with positive edge clock and positive level reset.
+
+17. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+18. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `\ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+Removing empty process `ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:68$2'.
+Removing empty process `ALU.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:25$1'.
+Found and cleaned up 5 empty switches in `\multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+Removing empty process `multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:439$52'.
+Removing empty process `multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:414$42'.
+Removing empty process `multiplier_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:350$21'.
+Found and cleaned up 5 empty switches in `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+Removing empty process `adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:272$130'.
+Found and cleaned up 10 empty switches in `\adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+Removing empty process `adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:225$108'.
+Removing empty process `adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:198$98'.
+Removing empty process `adder_32bit.$proc$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:139$71'.
+Cleaned up 21 empty switches.
+
+19. Executing CHECK pass (checking for obvious problems).
+Checking module ALU...
+Checking module multiplier_32bit...
+Checking module adder_32bit...
+Found and reported 0 problems.
+
+20. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~10 debug messages>
+Optimizing module multiplier_32bit.
+<suppressed ~31 debug messages>
+Optimizing module adder_32bit.
+<suppressed ~37 debug messages>
+
+21. Executing FLATTEN pass (flatten design).
+Deleting now unused module multiplier_32bit.
+Deleting now unused module adder_32bit.
+<suppressed ~2 debug messages>
+
+22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 1 unused cells and 290 unused wires.
+<suppressed ~5 debug messages>
+
+24. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+25. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+<suppressed ~117 debug messages>
+Removed a total of 39 cells.
+
+26. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$427: { \adder_inst.sum_raw_r [22:0] 1'0 } -> { 1'1 \adder_inst.sum_raw_r [21:0] 1'0 }
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$406: { \adder_inst.sum_raw_r [21:0] 2'00 } -> { 1'1 \adder_inst.sum_raw_r [20:0] 2'00 }
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$379: { \adder_inst.sum_raw_r [20:0] 3'000 } -> { 1'1 \adder_inst.sum_raw_r [19:0] 3'000 }
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$346: { \adder_inst.sum_raw_r [19:0] 4'0000 } -> { 1'1 \adder_inst.sum_raw_r [18:0] 4'0000 }
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$307: { \adder_inst.sum_raw_r [18:0] 5'00000 } -> { 1'1 \adder_inst.sum_raw_r [17:0] 5'00000 }
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$262: { \adder_inst.sum_raw_r [17:0] 6'000000 } -> { 1'1 \adder_inst.sum_raw_r [16:0] 6'000000 }
+      Replacing known input bits on port B of cell $flatten\adder_inst.$procmux$228: \adder_inst.sum_raw_r [24:1] -> { 1'1 \adder_inst.sum_raw_r [23:1] }
+      Replacing known input bits on port A of cell $flatten\multiplier_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:387$27: \multiplier_inst.product_raw -> { 1'0 \multiplier_inst.product_raw [46:0] }
+      Replacing known input bits on port B of cell $flatten\multiplier_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:387$27: { 1'0 \multiplier_inst.product_raw [47:1] } -> { 2'01 \multiplier_inst.product_raw [46:1] }
+      Replacing known input bits on port B of cell $flatten\multiplier_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:400$35: \multiplier_inst.man_rounded [23:1] -> { 1'1 \multiplier_inst.man_rounded [22:1] }
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$213.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$216.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$222.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$225.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$231.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$234.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$241.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$244.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$247.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$250.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$253.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$255.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$258.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$265.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$268.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$271.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$274.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$277.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$279.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$282.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$289.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$292.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$295.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$298.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$300.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$303.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$310.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$313.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$316.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$319.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$321.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$324.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$331.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$334.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$337.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$339.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$342.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$349.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$352.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$355.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$357.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$360.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$367.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$370.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$372.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$375.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$382.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$385.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$387.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$390.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$397.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$399.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$402.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$409.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$411.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$414.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$420.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$423.
+    dead port 2/2 on $mux $flatten\adder_inst.$procmux$429.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$432.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$438.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$444.
+    dead port 1/2 on $mux $flatten\adder_inst.$procmux$450.
+Removed 63 multiplexer ports.
+<suppressed ~26 debug messages>
+
+27. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+28. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+29. Executing OPT_DFF pass (perform DFF optimizations).
+
+30. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 0 unused cells and 85 unused wires.
+<suppressed ~1 debug messages>
+
+31. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+32. Rerunning OPT passes. (Maybe there is more to do…)
+
+33. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~23 debug messages>
+
+34. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+    New ctrl vector for $pmux cell $procmux$134: $auto$opt_reduce.cc:134:opt_pmux$626
+  Optimizing cells in module \ALU.
+Performed a total of 1 changes.
+
+35. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+36. Executing OPT_DFF pass (perform DFF optimizations).
+
+37. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+38. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~2 debug messages>
+
+39. Rerunning OPT passes. (Maybe there is more to do…)
+
+40. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+41. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+42. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+43. Executing OPT_DFF pass (perform DFF optimizations).
+
+44. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+45. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+46. Rerunning OPT passes. (Maybe there is more to do…)
+
+47. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+48. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+49. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+50. Executing OPT_DFF pass (perform DFF optimizations).
+
+51. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+52. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+53. Executing FSM pass (extract and optimize FSM).
+
+53.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+53.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+53.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+53.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+53.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+53.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+53.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+53.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+54. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+55. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+56. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+57. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+58. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+59. Executing OPT_DFF pass (perform DFF optimizations).
+
+60. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+61. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+62. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$456 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$441 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$427 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$406 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$379 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$346 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$307 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$262 ($mux).
+Removed top 1 bits (of 24) from mux cell ALU.$flatten\adder_inst.$procmux$228 ($mux).
+Removed top 1 bits (of 32) from mux cell ALU.$flatten\adder_inst.$procmux$190 ($mux).
+Removed top 31 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:263$127 ($add).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:263$127 ($add).
+Removed top 29 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:257$126 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:257$126 ($sub).
+Removed top 29 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:254$124 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:254$124 ($sub).
+Removed top 29 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:251$122 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:251$122 ($sub).
+Removed top 29 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:248$120 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:248$120 ($sub).
+Removed top 30 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:245$118 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:245$118 ($sub).
+Removed top 30 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:242$116 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:242$116 ($sub).
+Removed top 31 bits (of 32) from port B of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:239$114 ($sub).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:239$114 ($sub).
+Removed top 1 bits (of 25) from mux cell ALU.$flatten\adder_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:183$92 ($mux).
+Removed top 1 bits (of 25) from port A of cell ALU.$flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:182$88 ($add).
+Removed top 1 bits (of 25) from port B of cell ALU.$flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:182$88 ($add).
+Removed top 3 bits (of 8) from port B of cell ALU.$flatten\adder_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:166$76 ($gt).
+Removed top 1 bits (of 32) from mux cell ALU.$flatten\multiplier_inst.$procmux$157 ($mux).
+Removed top 24 bits (of 32) from mux cell ALU.$flatten\multiplier_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:401$38 ($mux).
+Removed top 31 bits (of 32) from port B of cell ALU.$flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:401$36 ($add).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:401$36 ($add).
+Removed top 24 bits (of 32) from mux cell ALU.$flatten\multiplier_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$30 ($mux).
+Removed top 31 bits (of 32) from port B of cell ALU.$flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$28 ($add).
+Removed top 24 bits (of 32) from port Y of cell ALU.$flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$28 ($add).
+Removed top 1 bits (of 48) from mux cell ALU.$flatten\multiplier_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:387$27 ($mux).
+Removed top 1 bits (of 8) from port B of cell ALU.$flatten\multiplier_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:383$25 ($sub).
+Removed top 1 bits (of 32) from mux cell ALU.$flatten\adder_inst.$procmux$193 ($mux).
+Removed top 1 bits (of 32) from mux cell ALU.$flatten\multiplier_inst.$procmux$160 ($mux).
+Removed top 1 bits (of 32) from mux cell ALU.$flatten\adder_inst.$procmux$196 ($mux).
+Removed top 1 bits (of 32) from mux cell ALU.$flatten\multiplier_inst.$procmux$163 ($mux).
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$2\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$3\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$4\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$5\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$6\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$7\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$8\man_norm[23:0].
+Removed top 1 bits (of 24) from wire ALU.$flatten\adder_inst.$9\man_norm[23:0].
+Removed top 24 bits (of 32) from wire ALU.$flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:263$127_Y.
+Removed top 24 bits (of 32) from wire ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:239$114_Y.
+Removed top 24 bits (of 32) from wire ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:248$120_Y.
+Removed top 24 bits (of 32) from wire ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:251$122_Y.
+Removed top 24 bits (of 32) from wire ALU.$flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:254$124_Y.
+Removed top 1 bits (of 25) from wire ALU.$flatten\adder_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:183$92_Y.
+Removed top 24 bits (of 32) from wire ALU.$flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$28_Y.
+
+63. Executing PEEPOPT pass (run peephole optimizers).
+
+64. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 0 unused cells and 17 unused wires.
+<suppressed ~1 debug messages>
+
+65. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module ALU:
+  creating $macc model for $flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:182$88 ($add).
+  creating $macc model for $flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:263$127 ($add).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$73 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$74 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:184$90 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:185$91 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:239$114 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:242$116 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:245$118 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:248$120 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:251$122 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:254$124 ($sub).
+  creating $macc model for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:257$126 ($sub).
+  creating $macc model for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:383$24 ($add).
+  creating $macc model for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$28 ($add).
+  creating $macc model for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:396$34 ($add).
+  creating $macc model for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:401$36 ($add).
+  creating $macc model for $flatten\multiplier_inst.$mul$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:380$23 ($mul).
+  creating $macc model for $flatten\multiplier_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:383$25 ($sub).
+  merging $macc model for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:383$24 into $flatten\multiplier_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:383$25.
+  creating $alu model for $macc $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:401$36.
+  creating $alu model for $macc $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:396$34.
+  creating $alu model for $macc $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$28.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:257$126.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:254$124.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:251$122.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:248$120.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:245$118.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:242$116.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:239$114.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:185$91.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:184$90.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$74.
+  creating $alu model for $macc $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$73.
+  creating $alu model for $macc $flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:263$127.
+  creating $alu model for $macc $flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:182$88.
+  creating $macc cell for $flatten\multiplier_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:383$25: $auto$alumacc.cc:365:replace_macc$642
+  creating $macc cell for $flatten\multiplier_inst.$mul$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:380$23: $auto$alumacc.cc:365:replace_macc$643
+  creating $alu model for $flatten\adder_inst.$ge$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:183$89 ($ge): merged with $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:185$91.
+  creating $alu model for $flatten\adder_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$72 ($gt): merged with $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$74.
+  creating $alu model for $flatten\adder_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:166$76 ($gt): new $alu
+  creating $alu model for $flatten\multiplier_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:404$40 ($gt): new $alu
+  creating $alu cell for $flatten\multiplier_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:404$40: $auto$alumacc.cc:485:replace_alu$646
+  creating $alu cell for $flatten\adder_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:166$76: $auto$alumacc.cc:485:replace_alu$657
+  creating $alu cell for $flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:263$127: $auto$alumacc.cc:485:replace_alu$662
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$73: $auto$alumacc.cc:485:replace_alu$665
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$74, $flatten\adder_inst.$gt$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:165$72: $auto$alumacc.cc:485:replace_alu$668
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:184$90: $auto$alumacc.cc:485:replace_alu$673
+  creating $alu cell for $flatten\adder_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:182$88: $auto$alumacc.cc:485:replace_alu$676
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:185$91, $flatten\adder_inst.$ge$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:183$89: $auto$alumacc.cc:485:replace_alu$679
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:239$114: $auto$alumacc.cc:485:replace_alu$688
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:242$116: $auto$alumacc.cc:485:replace_alu$691
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:245$118: $auto$alumacc.cc:485:replace_alu$694
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:248$120: $auto$alumacc.cc:485:replace_alu$697
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:251$122: $auto$alumacc.cc:485:replace_alu$700
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:254$124: $auto$alumacc.cc:485:replace_alu$703
+  creating $alu cell for $flatten\adder_inst.$sub$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:257$126: $auto$alumacc.cc:485:replace_alu$706
+  creating $alu cell for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:388$28: $auto$alumacc.cc:485:replace_alu$709
+  creating $alu cell for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:396$34: $auto$alumacc.cc:485:replace_alu$712
+  creating $alu cell for $flatten\multiplier_inst.$add$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:401$36: $auto$alumacc.cc:485:replace_alu$715
+  created 18 $alu and 2 $macc cells.
+
+66. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module ALU that may be considered for resource sharing.
+  Analyzing resource sharing options for $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:170$82 ($shr):
+    Found 2 activation_patterns using ctrl signal { $flatten\adder_inst.$eq$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:181$87_Y $auto$rtlil.cc:2493:Not$672 }.
+    Found 1 candidates: $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:169$79
+    Analyzing resource sharing with $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:169$79 ($shr):
+      Found 2 activation_patterns using ctrl signal { $flatten\adder_inst.$eq$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:181$87_Y $auto$rtlil.cc:2493:Not$672 }.
+      Forbidden control signals for this pair of cells: $flatten\adder_inst.$ge$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:183$89_Y
+      Activation pattern for cell $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:170$82: { $flatten\adder_inst.$eq$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:181$87_Y $auto$rtlil.cc:2493:Not$672 } = 2'01
+      Activation pattern for cell $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:170$82: $auto$rtlil.cc:2493:Not$672 = 1'1
+      Activation pattern for cell $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:169$79: { $flatten\adder_inst.$eq$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:181$87_Y $auto$rtlil.cc:2493:Not$672 } = 2'00
+      Activation pattern for cell $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:169$79: $auto$rtlil.cc:2493:Not$672 = 1'0
+      Size of SAT problem: 0 cells, 217 variables, 551 clauses
+      According to the SAT solver this pair of cells can be shared.
+      Activation signal for $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:170$82: $auto$share.cc:987:make_cell_activation_logic$721
+      New cell: $auto$share.cc:667:make_supercell$728 ($shr)
+  Analyzing resource sharing options for $auto$share.cc:667:make_supercell$728 ($shr):
+    Cell is always active. Therefore no sharing is possible.
+Removing 2 cells in module ALU:
+  Removing cell $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:169$79 ($shr).
+  Removing cell $flatten\adder_inst.$shr$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:170$82 ($shr).
+
+67. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~7 debug messages>
+
+68. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+69. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~23 debug messages>
+
+70. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+71. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+72. Executing OPT_DFF pass (perform DFF optimizations).
+
+73. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 2 unused cells and 9 unused wires.
+<suppressed ~4 debug messages>
+
+74. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+75. Rerunning OPT passes. (Maybe there is more to do…)
+
+76. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~23 debug messages>
+
+77. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+78. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+79. Executing OPT_DFF pass (perform DFF optimizations).
+
+80. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+81. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+82. Executing MEMORY pass.
+
+82.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+82.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+82.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+82.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+82.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+82.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+82.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+82.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+82.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+82.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+83. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+84. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~18 debug messages>
+
+85. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+86. Executing OPT_DFF pass (perform DFF optimizations).
+
+87. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 6 unused cells and 12 unused wires.
+<suppressed ~7 debug messages>
+
+88. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+89. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+90. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+91. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+92. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$procmux$262:
+      Old ports: A={ \adder_inst.sum_raw_r [15:0] 7'0000000 }, B={ \adder_inst.sum_raw_r [16:0] 6'000000 }, Y=$auto$wreduce.cc:461:run$633 [22:0]
+      New ports: A={ \adder_inst.sum_raw_r [15:0] 1'0 }, B=\adder_inst.sum_raw_r [16:0], Y=$auto$wreduce.cc:461:run$633 [22:6]
+      New connections: $auto$wreduce.cc:461:run$633 [5:0] = 6'000000
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:119$54:
+      Old ports: A={ 1'1 \i_a_stage1 [22:0] }, B={ 1'0 \i_a_stage1 [22:0] }, Y=\adder_inst.man_a
+      New ports: A=1'1, B=1'0, Y=\adder_inst.man_a [23]
+      New connections: \adder_inst.man_a [22:0] = \i_a_stage1 [22:0]
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$ternary$/mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:120$56:
+      Old ports: A={ 1'1 \i_b_stage1 [22:0] }, B={ 1'0 \i_b_stage1 [22:0] }, Y=\adder_inst.man_b
+      New ports: A=1'1, B=1'0, Y=\adder_inst.man_b [23]
+      New connections: \adder_inst.man_b [22:0] = \i_b_stage1 [22:0]
+  Optimizing cells in module \ALU.
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$procmux$307:
+      Old ports: A=$auto$wreduce.cc:461:run$633 [22:0], B={ \adder_inst.sum_raw_r [17:0] 5'00000 }, Y=$auto$wreduce.cc:461:run$632 [22:0]
+      New ports: A={ $auto$wreduce.cc:461:run$633 [22:6] 1'0 }, B=\adder_inst.sum_raw_r [17:0], Y=$auto$wreduce.cc:461:run$632 [22:5]
+      New connections: $auto$wreduce.cc:461:run$632 [4:0] = 5'00000
+  Optimizing cells in module \ALU.
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$procmux$346:
+      Old ports: A=$auto$wreduce.cc:461:run$632 [22:0], B={ \adder_inst.sum_raw_r [18:0] 4'0000 }, Y=$auto$wreduce.cc:461:run$631 [22:0]
+      New ports: A={ $auto$wreduce.cc:461:run$632 [22:5] 1'0 }, B=\adder_inst.sum_raw_r [18:0], Y=$auto$wreduce.cc:461:run$631 [22:4]
+      New connections: $auto$wreduce.cc:461:run$631 [3:0] = 4'0000
+  Optimizing cells in module \ALU.
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$procmux$379:
+      Old ports: A=$auto$wreduce.cc:461:run$631 [22:0], B={ \adder_inst.sum_raw_r [19:0] 3'000 }, Y=$auto$wreduce.cc:461:run$630 [22:0]
+      New ports: A={ $auto$wreduce.cc:461:run$631 [22:4] 1'0 }, B=\adder_inst.sum_raw_r [19:0], Y=$auto$wreduce.cc:461:run$630 [22:3]
+      New connections: $auto$wreduce.cc:461:run$630 [2:0] = 3'000
+  Optimizing cells in module \ALU.
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$procmux$406:
+      Old ports: A=$auto$wreduce.cc:461:run$630 [22:0], B={ \adder_inst.sum_raw_r [20:0] 2'00 }, Y=$auto$wreduce.cc:461:run$629 [22:0]
+      New ports: A={ $auto$wreduce.cc:461:run$630 [22:3] 1'0 }, B=\adder_inst.sum_raw_r [20:0], Y=$auto$wreduce.cc:461:run$629 [22:2]
+      New connections: $auto$wreduce.cc:461:run$629 [1:0] = 2'00
+  Optimizing cells in module \ALU.
+    Consolidated identical input bits for $mux cell $flatten\adder_inst.$procmux$427:
+      Old ports: A=$auto$wreduce.cc:461:run$629 [22:0], B={ \adder_inst.sum_raw_r [21:0] 1'0 }, Y=$auto$wreduce.cc:461:run$628 [22:0]
+      New ports: A={ $auto$wreduce.cc:461:run$629 [22:2] 1'0 }, B=\adder_inst.sum_raw_r [21:0], Y=$auto$wreduce.cc:461:run$628 [22:1]
+      New connections: $auto$wreduce.cc:461:run$628 [0] = 1'0
+  Optimizing cells in module \ALU.
+Performed a total of 8 changes.
+
+93. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+94. Executing OPT_SHARE pass.
+
+95. Executing OPT_DFF pass (perform DFF optimizations).
+
+96. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+97. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~2 debug messages>
+
+98. Rerunning OPT passes. (Maybe there is more to do…)
+
+99. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+100. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+101. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+102. Executing OPT_SHARE pass.
+
+103. Executing OPT_DFF pass (perform DFF optimizations).
+
+104. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+105. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+106. Executing TECHMAP pass (map to technology primitives).
+
+106.1. Executing Verilog-2005 frontend: /nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/nix/store/9r0bh7sp051dpm8km8bqlb028anpd3v3-yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+106.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $adff.
+Using template $paramod$constmap:0b7151c0bb523058e4c1bb912c2bf89fd362e273$paramod$532ed33aa48e40f5030f3f04e98e15a19c73fe90\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$dbcdc7e8aa1a4080cea2deda6fdc8772064f4d90\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_90_alu for cells of type $alu.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using template $paramod$4504179771182265d0fe43701f70377fc04ca361\_90_alu for cells of type $alu.
+Using template $paramod$403e3b916c6203cefc86d5db164f41811de6a0e8\_90_alu for cells of type $alu.
+Using template $paramod$a04dd9d4d8b430140c4ff94b50470fb380fda2a0\_90_alu for cells of type $alu.
+Using template $paramod$65af072f6065f0ed27ad80c8089003dcba6e1c40\_90_alu for cells of type $alu.
+Using template $paramod$10ed987432f06055e5279101f9ec60a49861b43c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$a7a1d5fc4563c49b9a54941942b1beedd64a98db\_90_alu for cells of type $alu.
+Using template $paramod$403a3c2fa431a154c52a6a5429d7a6260b5d144f\_90_alu for cells of type $alu.
+Using template $paramod$e82d3fc1811c5751348a3964470632b35a435fc7\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc.
+  add \adder_inst.exp_a_r (8 bits, unsigned)
+  add \adder_inst.exp_b_r (8 bits, unsigned)
+  add 8'10000001 (8 bits, unsigned)
+Using template $paramod$3ac6e4268d0279df14823f25676acf685165517e\_90_alu for cells of type $alu.
+Using template $paramod$79aa992f2eb7f354d4aaf651790713cf239111fa\_90_alu for cells of type $alu.
+  add \adder_inst.man_a_r * \adder_inst.man_b_r (24x24 bits, unsigned)
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000111 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011001 for cells of type $lcu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000011000 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000110000 for cells of type $fa.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000101111 for cells of type $fa.
+Using template $paramod$88aad6f8473fb7e4e5fbfb8335ddebad03429eaa\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000110000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~3164 debug messages>
+
+107. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~4157 debug messages>
+
+108. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+<suppressed ~732 debug messages>
+Removed a total of 244 cells.
+
+109. Executing OPT_DFF pass (perform DFF optimizations).
+
+110. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 180 unused cells and 1144 unused wires.
+<suppressed ~181 debug messages>
+
+111. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+112. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+113. Executing OPT_DFF pass (perform DFF optimizations).
+
+114. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+115. Executing ABC pass (technology mapping using ABC).
+
+115.1. Extracting gate netlist of module `\ALU' to `<abc-temp-dir>/input.blif'..
+Extracted 5736 gates and 6013 wires to a netlist network with 275 inputs and 180 outputs.
+
+115.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+115.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:      626
+ABC RESULTS:             ORNOT cells:      323
+ABC RESULTS:              XNOR cells:      504
+ABC RESULTS:               NOT cells:      177
+ABC RESULTS:               NOR cells:      376
+ABC RESULTS:               XOR cells:      874
+ABC RESULTS:              NAND cells:      183
+ABC RESULTS:               MUX cells:      557
+ABC RESULTS:                OR cells:      661
+ABC RESULTS:            ANDNOT cells:     1416
+ABC RESULTS:        internal signals:     5558
+ABC RESULTS:           input signals:      275
+ABC RESULTS:          output signals:      180
+Removing temp directory.
+
+116. Executing OPT pass (performing simple optimizations).
+
+116.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~95 debug messages>
+
+116.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+116.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+116.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 7 unused cells and 1220 unused wires.
+<suppressed ~23 debug messages>
+
+116.5. Finished fast OPT passes.
+
+117. Executing HIERARCHY pass (managing design hierarchy).
+
+117.1. Analyzing design hierarchy..
+Top module:  \ALU
+
+117.2. Analyzing design hierarchy..
+Top module:  \ALU
+Removed 0 unused modules.
+
+118. Executing CHECK pass (checking for obvious problems).
+Checking module ALU...
+Found and reported 0 problems.
+
+119. Printing statistics.
+
+=== ALU ===
+
+   Number of wires:               5690
+   Number of wire bits:           6554
+   Number of public wires:         109
+   Number of public wire bits:     942
+   Number of ports:                  9
+   Number of port bits:            102
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6003
+     $_ANDNOT_                    1416
+     $_AND_                        626
+     $_DFF_PP0_                    314
+     $_MUX_                        557
+     $_NAND_                       183
+     $_NOR_                        376
+     $_NOT_                        170
+     $_ORNOT_                      323
+     $_OR_                         661
+     $_XNOR_                       504
+     $_XOR_                        871
+     $scopeinfo                      2
+
+120. Generating Graphviz representation of design.
+Writing dot description to `/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/06-yosys-synthesis/primitive_techmap.dot'.
+Dumping module ALU to page 1.
+
+121. Executing OPT pass (performing simple optimizations).
+
+121.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+<suppressed ~1 debug messages>
+
+121.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+121.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+121.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+121.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+121.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+121.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+121.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+121.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+121.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ALU..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+121.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ALU.
+Performed a total of 0 changes.
+
+121.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ALU'.
+Removed a total of 0 cells.
+
+121.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+121.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+
+121.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ALU.
+
+121.16. Finished OPT passes. (There is nothing left to do.)
+
+122. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 2 unused cells and 45 unused wires.
+<suppressed ~47 debug messages>
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/tmp/9d004e59996e4a03aa86b43abc27556b.lib ",
+   "modules": {
+      "\\ALU": {
+         "num_wires":         5644,
+         "num_wire_bits":     6132,
+         "num_pub_wires":     64,
+         "num_pub_wire_bits": 521,
+         "num_ports":         9,
+         "num_port_bits":     102,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         6000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1416,
+            "$_AND_": 626,
+            "$_DFF_PP0_": 314,
+            "$_MUX_": 556,
+            "$_NAND_": 183,
+            "$_NOR_": 376,
+            "$_NOT_": 170,
+            "$_ORNOT_": 323,
+            "$_OR_": 661,
+            "$_XNOR_": 504,
+            "$_XOR_": 871
+         }
+      }
+   },
+      "design": {
+         "num_wires":         5644,
+         "num_wire_bits":     6132,
+         "num_pub_wires":     64,
+         "num_pub_wire_bits": 521,
+         "num_ports":         9,
+         "num_port_bits":     102,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         6000,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1416,
+            "$_AND_": 626,
+            "$_DFF_PP0_": 314,
+            "$_MUX_": 556,
+            "$_NAND_": 183,
+            "$_NOR_": 376,
+            "$_NOT_": 170,
+            "$_ORNOT_": 323,
+            "$_OR_": 661,
+            "$_XNOR_": 504,
+            "$_XOR_": 871
+         }
+      }
+}
+
+123. Printing statistics.
+
+=== ALU ===
+
+   Number of wires:               5644
+   Number of wire bits:           6132
+   Number of public wires:          64
+   Number of public wire bits:     521
+   Number of ports:                  9
+   Number of port bits:            102
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6000
+     $_ANDNOT_                    1416
+     $_AND_                        626
+     $_DFF_PP0_                    314
+     $_MUX_                        556
+     $_NAND_                       183
+     $_NOR_                        376
+     $_NOT_                        170
+     $_ORNOT_                      323
+     $_OR_                         661
+     $_XNOR_                       504
+     $_XOR_                        871
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_PP0_ is unknown!
+
+[INFO] Applying tri-state buffer mapping from '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v'…
+
+124. Executing TECHMAP pass (map to technology primitives).
+
+124.1. Executing Verilog-2005 frontend: /home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+124.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+125. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+[INFO] Applying latch mapping from '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v'…
+
+126. Executing TECHMAP pass (map to technology primitives).
+
+126.1. Executing Verilog-2005 frontend: /home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+126.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+127. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+128. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+128.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\ALU':
+  mapped 314 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/tmp/9d004e59996e4a03aa86b43abc27556b.lib ",
+   "modules": {
+      "\\ALU": {
+         "num_wires":         5958,
+         "num_wire_bits":     6446,
+         "num_pub_wires":     64,
+         "num_pub_wire_bits": 521,
+         "num_ports":         9,
+         "num_port_bits":     102,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         6314,
+         "area":              8250.412800,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1416,
+            "$_AND_": 626,
+            "$_MUX_": 556,
+            "$_NAND_": 183,
+            "$_NOR_": 376,
+            "$_NOT_": 484,
+            "$_ORNOT_": 323,
+            "$_OR_": 661,
+            "$_XNOR_": 504,
+            "$_XOR_": 871,
+            "sky130_fd_sc_hd__dfrtp_2": 314
+         }
+      }
+   },
+      "design": {
+         "num_wires":         5958,
+         "num_wire_bits":     6446,
+         "num_pub_wires":     64,
+         "num_pub_wire_bits": 521,
+         "num_ports":         9,
+         "num_port_bits":     102,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         6314,
+         "area":              8250.412800,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 1416,
+            "$_AND_": 626,
+            "$_MUX_": 556,
+            "$_NAND_": 183,
+            "$_NOR_": 376,
+            "$_NOT_": 484,
+            "$_ORNOT_": 323,
+            "$_OR_": 661,
+            "$_XNOR_": 504,
+            "$_XOR_": 871,
+            "sky130_fd_sc_hd__dfrtp_2": 314
+         }
+      }
+}
+
+129. Printing statistics.
+
+=== ALU ===
+
+   Number of wires:               5958
+   Number of wire bits:           6446
+   Number of public wires:          64
+   Number of public wire bits:     521
+   Number of ports:                  9
+   Number of port bits:            102
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               6314
+     $_ANDNOT_                    1416
+     $_AND_                        626
+     $_MUX_                        556
+     $_NAND_                       183
+     $_NOR_                        376
+     $_NOT_                        484
+     $_ORNOT_                      323
+     $_OR_                         661
+     $_XNOR_                       504
+     $_XOR_                        871
+     sky130_fd_sc_hd__dfrtp_2      314
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+
+   Chip area for module '\ALU': 8250.412800
+     of which used for sequential elements: 8250.412800 (100.00%)
+
+[INFO] Using generated ABC script '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/06-yosys-synthesis/AREA_0.abc'…
+
+130. Executing ABC pass (technology mapping using ABC).
+
+130.1. Extracting gate netlist of module `\ALU' to `/tmp/yosys-abc-uMpfjg/input.blif'..
+Extracted 6000 gates and 6276 wires to a netlist network with 276 inputs and 494 outputs.
+
+130.1.1. Executing ABC.
+Running ABC command: "/nix/store/6l3aj1gi4lja8z5s4lan2k2cfz9mqkrz-yosys-abc/bin/abc" -s -f /tmp/yosys-abc-uMpfjg/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-uMpfjg/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-uMpfjg/input.blif 
+ABC: + read_lib -w /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/tmp/9d004e59996e4a03aa86b43abc27556b.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.09 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/tmp/9d004e59996e4a03aa86b43abc27556b.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.10 sec
+ABC: Memory =    9.54 MB. Time =     0.10 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/06-yosys-synthesis/synthesis.abc.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_2/Y".
+ABC: Setting output load to be 33.442001.
+ABC: + source /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/06-yosys-synthesis/AREA_0.abc 
+ABC: Error: The network is combinational.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_2/Y) in the library.
+ABC: WireLoad = "none"  Gates =   4635 (  9.0 %)   Cap = 12.1 ff (  2.7 %)   Area =    42762.26 ( 86.6 %)   Delay =  9731.77 ps  (  1.4 %)               
+ABC: Path  0 --      26 : 0   46 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout = 141.0 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --    1091 : 4    3 sky130_fd_sc_hd__and4_2   A =  10.01  Df = 226.4   -3.3 ps  S =  78.3 ps  Cin =  1.5 ff  Cout =   8.2 ff  Cmax = 300.3 ff  G =  511  
+ABC: Path  2 --    1094 : 3    3 sky130_fd_sc_hd__or3_2    A =   7.51  Df = 737.9 -364.7 ps  S = 106.6 ps  Cin =  1.5 ff  Cout =  11.6 ff  Cmax = 310.4 ff  G =  741  
+ABC: Path  3 --    1113 : 3    3 sky130_fd_sc_hd__a21o_2   A =   8.76  Df = 964.3 -422.6 ps  S =  61.7 ps  Cin =  2.4 ff  Cout =   9.6 ff  Cmax = 309.5 ff  G =  390  
+ABC: Path  4 --    1115 : 3    3 sky130_fd_sc_hd__a21bo_2  A =  10.01  Df =1196.8 -193.0 ps  S =  73.2 ps  Cin =  2.0 ff  Cout =  11.0 ff  Cmax = 288.4 ff  G =  513  
+ABC: Path  5 --    1116 : 3    2 sky130_fd_sc_hd__and3_2   A =   7.51  Df =1414.8 -218.2 ps  S =  61.8 ps  Cin =  1.5 ff  Cout =   6.7 ff  Cmax = 309.5 ff  G =  430  
+ABC: Path  6 --    1137 : 3    4 sky130_fd_sc_hd__or3_2    A =   7.51  Df =1939.1 -451.3 ps  S = 113.5 ps  Cin =  1.5 ff  Cout =  13.9 ff  Cmax = 310.4 ff  G =  887  
+ABC: Path  7 --    1139 : 4    4 sky130_fd_sc_hd__o211a_2  A =  10.01  Df =2120.2 -332.3 ps  S =  86.7 ps  Cin =  2.4 ff  Cout =  11.2 ff  Cmax = 268.3 ff  G =  448  
+ABC: Path  8 --    1343 : 4    2 sky130_fd_sc_hd__o211a_2  A =  10.01  Df =2390.5   -1.9 ps  S =  61.1 ps  Cin =  2.4 ff  Cout =   6.2 ff  Cmax = 268.3 ff  G =  246  
+ABC: Path  9 --    1345 : 4    4 sky130_fd_sc_hd__or4_2    A =   8.76  Df =3059.5 -448.7 ps  S = 144.1 ps  Cin =  1.5 ff  Cout =  13.9 ff  Cmax = 310.4 ff  G =  898  
+ABC: Path 10 --    1436 : 4    5 sky130_fd_sc_hd__o211a_2  A =  10.01  Df =3270.2 -416.7 ps  S = 127.1 ps  Cin =  2.4 ff  Cout =  18.5 ff  Cmax = 268.3 ff  G =  741  
+ABC: Path 11 --    1446 : 3    2 sky130_fd_sc_hd__or3_2    A =   7.51  Df =3767.5 -229.6 ps  S =  91.3 ps  Cin =  1.5 ff  Cout =   6.9 ff  Cmax = 310.4 ff  G =  442  
+ABC: Path 12 --    1552 : 4    3 sky130_fd_sc_hd__o211a_2  A =  10.01  Df =3944.8 -192.1 ps  S = 102.5 ps  Cin =  2.4 ff  Cout =  13.9 ff  Cmax = 268.3 ff  G =  555  
+ABC: Path 13 --    1554 : 4    2 sky130_fd_sc_hd__a211oi_2 A =  12.51  Df =4210.1 -104.9 ps  S = 246.3 ps  Cin =  4.4 ff  Cout =   9.4 ff  Cmax =  88.8 ff  G =  204  
+ABC: Path 14 --    1555 : 1    2 sky130_fd_sc_hd__inv_2    A =   3.75  Df =4263.9  -99.8 ps  S =  50.0 ps  Cin =  4.5 ff  Cout =   4.9 ff  Cmax = 331.4 ff  G =  105  
+ABC: Path 15 --    3467 : 4    2 sky130_fd_sc_hd__o211a_2  A =  10.01  Df =4402.5  -62.5 ps  S =  61.1 ps  Cin =  2.4 ff  Cout =   6.3 ff  Cmax = 268.3 ff  G =  248  
+ABC: Path 16 --    3469 : 2    3 sky130_fd_sc_hd__and2b_2  A =   8.76  Df =4792.2 -141.0 ps  S =  89.9 ps  Cin =  1.6 ff  Cout =  14.9 ff  Cmax = 310.4 ff  G =  909  
+ABC: Path 17 --    3586 : 4    2 sky130_fd_sc_hd__nand4_2  A =  12.51  Df =4861.8 -134.5 ps  S =  96.8 ps  Cin =  4.4 ff  Cout =   4.2 ff  Cmax = 200.5 ff  G =   90  
+ABC: Path 18 --    3608 : 3    2 sky130_fd_sc_hd__or3_2    A =   7.51  Df =5189.9 -214.4 ps  S =  80.3 ps  Cin =  1.5 ff  Cout =   4.1 ff  Cmax = 310.4 ff  G =  252  
+ABC: Path 19 --    3610 : 5    4 sky130_fd_sc_hd__o221a_2  A =  11.26  Df =5493.1 -116.4 ps  S =  84.0 ps  Cin =  2.3 ff  Cout =  11.0 ff  Cmax = 281.1 ff  G =  450  
+ABC: Path 20 --    3616 : 3    3 sky130_fd_sc_hd__a21o_2   A =   8.76  Df =5701.1 -180.4 ps  S =  59.6 ps  Cin =  2.4 ff  Cout =   9.2 ff  Cmax = 309.5 ff  G =  371  
+ABC: Path 21 --    3707 : 4    2 sky130_fd_sc_hd__a211o_2  A =  10.01  Df =6028.6 -383.3 ps  S =  51.3 ps  Cin =  2.4 ff  Cout =   4.0 ff  Cmax = 325.0 ff  G =  166  
+ABC: Path 22 --    3729 : 5    3 sky130_fd_sc_hd__a2111o_2 A =  12.51  Df =6468.4 -682.5 ps  S =  82.4 ps  Cin =  2.4 ff  Cout =   9.4 ff  Cmax = 324.1 ff  G =  378  
+ABC: Path 23 --    3732 : 3   10 sky130_fd_sc_hd__a21o_2   A =   8.76  Df =6718.5 -742.5 ps  S = 130.4 ps  Cin =  2.4 ff  Cout =  24.3 ff  Cmax = 309.5 ff  G =  989  
+ABC: Path 24 --    3749 : 4    2 sky130_fd_sc_hd__and4_2   A =  10.01  Df =6955.9 -741.2 ps  S =  65.1 ps  Cin =  1.5 ff  Cout =   5.0 ff  Cmax = 300.3 ff  G =  310  
+ABC: Path 25 --    3754 : 5    5 sky130_fd_sc_hd__a2111o_2 A =  12.51  Df =7529.6  -93.3 ps  S =  94.3 ps  Cin =  2.4 ff  Cout =  13.8 ff  Cmax = 324.1 ff  G =  548  
+ABC: Path 26 --    3780 : 4    3 sky130_fd_sc_hd__nor4b_2  A =  15.01  Df =7783.2 -192.0 ps  S = 285.1 ps  Cin =  3.7 ff  Cout =   7.6 ff  Cmax =  65.0 ff  G =  203  
+ABC: Path 27 --    3785 : 2    4 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =7901.1 -218.6 ps  S =  98.5 ps  Cin =  4.4 ff  Cout =  12.3 ff  Cmax = 295.7 ff  G =  267  
+ABC: Path 28 --    5030 : 3    4 sky130_fd_sc_hd__or3_2    A =   7.51  Df =8450.9 -544.8 ps  S = 120.2 ps  Cin =  1.5 ff  Cout =  17.1 ff  Cmax = 310.4 ff  G = 1077  
+ABC: Path 29 --    5035 : 3    5 sky130_fd_sc_hd__nor3_2   A =  10.01  Df =8707.3 -732.3 ps  S = 300.5 ps  Cin =  4.4 ff  Cout =  15.1 ff  Cmax =  92.5 ff  G =  327  
+ABC: Path 30 --    5042 : 4    2 sky130_fd_sc_hd__or4b_2   A =  10.01  Df =9344.4-1147.5 ps  S = 115.9 ps  Cin =  1.5 ff  Cout =   6.6 ff  Cmax = 265.5 ff  G =  432  
+ABC: Path 31 --    5044 : 3    1 sky130_fd_sc_hd__a21oi_2  A =   8.76  Df =9731.8-1408.3 ps  S = 417.7 ps  Cin =  4.6 ff  Cout =  33.4 ff  Cmax = 128.2 ff  G =  733  
+ABC: Start-point = pi25 (\adder_inst.man_a_r [14]).  End-point = po137 (\multiplier_inst.man_final [15]).
+ABC: netlist                       : i/o =  276/  494  lat =    0  nd =  4635  edge =  12855  area =42767.66  delay =31.00  lev = 31
+ABC: + write_blif /tmp/yosys-abc-uMpfjg/output.blif 
+
+130.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2oi_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a32oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor4b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a311oi_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand3_2 cells:      198
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__and4bb_2 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__o41ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a41oi_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o41a_2 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:       52
+ABC RESULTS:   sky130_fd_sc_hd__o2111a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:      181
+ABC RESULTS:   sky130_fd_sc_hd__o31ai_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__or4bb_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_2 cells:       14
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:      103
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:       32
+ABC RESULTS:   sky130_fd_sc_hd__a311o_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o32a_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_2 cells:      133
+ABC RESULTS:   sky130_fd_sc_hd__a41o_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2a_2 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__a211oi_2 cells:       66
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:       98
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__and3b_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_2 cells:       51
+ABC RESULTS:   sky130_fd_sc_hd__nor4_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__a21o_2 cells:      272
+ABC RESULTS:   sky130_fd_sc_hd__and4b_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_2 cells:        8
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:       43
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:       87
+ABC RESULTS:   sky130_fd_sc_hd__o2111ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a2111o_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:      118
+ABC RESULTS:   sky130_fd_sc_hd__o31a_2 cells:       15
+ABC RESULTS:   sky130_fd_sc_hd__o21ba_2 cells:       58
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:      126
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:      121
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:       93
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:       42
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:       85
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:       41
+ABC RESULTS:   sky130_fd_sc_hd__a221oi_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:       74
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:      331
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_2 cells:      310
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:       85
+ABC RESULTS:   sky130_fd_sc_hd__nand4_2 cells:       45
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:      176
+ABC RESULTS:   sky130_fd_sc_hd__xor2_2 cells:      108
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:      171
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:      148
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:      122
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:      304
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:       80
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:      415
+ABC RESULTS:        internal signals:     5506
+ABC RESULTS:           input signals:      276
+ABC RESULTS:          output signals:      494
+Removing temp directory.
+
+131. Executing SETUNDEF pass (replace undef values with defined constants).
+
+132. Executing HILOMAP pass (mapping to constant drivers).
+
+133. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+134. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ALU..
+Removed 0 unused cells and 6340 unused wires.
+<suppressed ~65 debug messages>
+
+135. Executing INSBUF pass (insert buffer cells for connected wires).
+
+136. Executing CHECK pass (checking for obvious problems).
+Checking module ALU...
+Found and reported 0 problems.
+{
+   "creator": "Yosys 0.46 (git sha1 e97731b9dda91fa5fa53ed87df7c34163ba59a41, clang++ 17.0.6 -fPIC -O3)",
+   "invocation": "stat -json -liberty /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/tmp/9d004e59996e4a03aa86b43abc27556b.lib ",
+   "modules": {
+      "\\ALU": {
+         "num_wires":         4924,
+         "num_wire_bits":     5017,
+         "num_pub_wires":     364,
+         "num_pub_wire_bits": 457,
+         "num_ports":         9,
+         "num_port_bits":     102,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4949,
+         "area":              51012.675200,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a2111o_2": 5,
+            "sky130_fd_sc_hd__a211o_2": 87,
+            "sky130_fd_sc_hd__a211oi_2": 66,
+            "sky130_fd_sc_hd__a21bo_2": 74,
+            "sky130_fd_sc_hd__a21boi_2": 14,
+            "sky130_fd_sc_hd__a21o_2": 272,
+            "sky130_fd_sc_hd__a21oi_2": 171,
+            "sky130_fd_sc_hd__a221o_2": 43,
+            "sky130_fd_sc_hd__a221oi_2": 6,
+            "sky130_fd_sc_hd__a22o_2": 103,
+            "sky130_fd_sc_hd__a22oi_2": 133,
+            "sky130_fd_sc_hd__a2bb2o_2": 7,
+            "sky130_fd_sc_hd__a2bb2oi_2": 3,
+            "sky130_fd_sc_hd__a311o_2": 6,
+            "sky130_fd_sc_hd__a311oi_2": 2,
+            "sky130_fd_sc_hd__a31o_2": 85,
+            "sky130_fd_sc_hd__a31oi_2": 11,
+            "sky130_fd_sc_hd__a32o_2": 10,
+            "sky130_fd_sc_hd__a32oi_2": 1,
+            "sky130_fd_sc_hd__a41o_2": 8,
+            "sky130_fd_sc_hd__a41oi_2": 1,
+            "sky130_fd_sc_hd__and2_2": 126,
+            "sky130_fd_sc_hd__and2b_2": 121,
+            "sky130_fd_sc_hd__and3_2": 176,
+            "sky130_fd_sc_hd__and3b_2": 8,
+            "sky130_fd_sc_hd__and4_2": 181,
+            "sky130_fd_sc_hd__and4b_2": 7,
+            "sky130_fd_sc_hd__and4bb_2": 28,
+            "sky130_fd_sc_hd__dfrtp_2": 314,
+            "sky130_fd_sc_hd__inv_2": 415,
+            "sky130_fd_sc_hd__mux2_1": 122,
+            "sky130_fd_sc_hd__nand2_2": 331,
+            "sky130_fd_sc_hd__nand2b_2": 85,
+            "sky130_fd_sc_hd__nand3_2": 198,
+            "sky130_fd_sc_hd__nand3b_2": 16,
+            "sky130_fd_sc_hd__nand4_2": 45,
+            "sky130_fd_sc_hd__nor2_2": 304,
+            "sky130_fd_sc_hd__nor3_2": 42,
+            "sky130_fd_sc_hd__nor3b_2": 8,
+            "sky130_fd_sc_hd__nor4_2": 11,
+            "sky130_fd_sc_hd__nor4b_2": 2,
+            "sky130_fd_sc_hd__o2111a_2": 3,
+            "sky130_fd_sc_hd__o2111ai_2": 1,
+            "sky130_fd_sc_hd__o211a_2": 98,
+            "sky130_fd_sc_hd__o211ai_2": 52,
+            "sky130_fd_sc_hd__o21a_2": 80,
+            "sky130_fd_sc_hd__o21ai_2": 118,
+            "sky130_fd_sc_hd__o21ba_2": 58,
+            "sky130_fd_sc_hd__o21bai_2": 51,
+            "sky130_fd_sc_hd__o221a_2": 32,
+            "sky130_fd_sc_hd__o221ai_2": 4,
+            "sky130_fd_sc_hd__o22a_2": 17,
+            "sky130_fd_sc_hd__o22ai_2": 5,
+            "sky130_fd_sc_hd__o2bb2a_2": 28,
+            "sky130_fd_sc_hd__o311a_2": 2,
+            "sky130_fd_sc_hd__o31a_2": 15,
+            "sky130_fd_sc_hd__o31ai_2": 4,
+            "sky130_fd_sc_hd__o32a_2": 4,
+            "sky130_fd_sc_hd__o41a_2": 9,
+            "sky130_fd_sc_hd__o41ai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 148,
+            "sky130_fd_sc_hd__or3_2": 93,
+            "sky130_fd_sc_hd__or3b_2": 11,
+            "sky130_fd_sc_hd__or4_2": 41,
+            "sky130_fd_sc_hd__or4b_2": 4,
+            "sky130_fd_sc_hd__or4bb_2": 4,
+            "sky130_fd_sc_hd__xnor2_2": 310,
+            "sky130_fd_sc_hd__xor2_2": 108
+         }
+      }
+   },
+      "design": {
+         "num_wires":         4924,
+         "num_wire_bits":     5017,
+         "num_pub_wires":     364,
+         "num_pub_wire_bits": 457,
+         "num_ports":         9,
+         "num_port_bits":     102,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         4949,
+         "area":              51012.675200,
+         "num_cells_by_type": {
+            "sky130_fd_sc_hd__a2111o_2": 5,
+            "sky130_fd_sc_hd__a211o_2": 87,
+            "sky130_fd_sc_hd__a211oi_2": 66,
+            "sky130_fd_sc_hd__a21bo_2": 74,
+            "sky130_fd_sc_hd__a21boi_2": 14,
+            "sky130_fd_sc_hd__a21o_2": 272,
+            "sky130_fd_sc_hd__a21oi_2": 171,
+            "sky130_fd_sc_hd__a221o_2": 43,
+            "sky130_fd_sc_hd__a221oi_2": 6,
+            "sky130_fd_sc_hd__a22o_2": 103,
+            "sky130_fd_sc_hd__a22oi_2": 133,
+            "sky130_fd_sc_hd__a2bb2o_2": 7,
+            "sky130_fd_sc_hd__a2bb2oi_2": 3,
+            "sky130_fd_sc_hd__a311o_2": 6,
+            "sky130_fd_sc_hd__a311oi_2": 2,
+            "sky130_fd_sc_hd__a31o_2": 85,
+            "sky130_fd_sc_hd__a31oi_2": 11,
+            "sky130_fd_sc_hd__a32o_2": 10,
+            "sky130_fd_sc_hd__a32oi_2": 1,
+            "sky130_fd_sc_hd__a41o_2": 8,
+            "sky130_fd_sc_hd__a41oi_2": 1,
+            "sky130_fd_sc_hd__and2_2": 126,
+            "sky130_fd_sc_hd__and2b_2": 121,
+            "sky130_fd_sc_hd__and3_2": 176,
+            "sky130_fd_sc_hd__and3b_2": 8,
+            "sky130_fd_sc_hd__and4_2": 181,
+            "sky130_fd_sc_hd__and4b_2": 7,
+            "sky130_fd_sc_hd__and4bb_2": 28,
+            "sky130_fd_sc_hd__dfrtp_2": 314,
+            "sky130_fd_sc_hd__inv_2": 415,
+            "sky130_fd_sc_hd__mux2_1": 122,
+            "sky130_fd_sc_hd__nand2_2": 331,
+            "sky130_fd_sc_hd__nand2b_2": 85,
+            "sky130_fd_sc_hd__nand3_2": 198,
+            "sky130_fd_sc_hd__nand3b_2": 16,
+            "sky130_fd_sc_hd__nand4_2": 45,
+            "sky130_fd_sc_hd__nor2_2": 304,
+            "sky130_fd_sc_hd__nor3_2": 42,
+            "sky130_fd_sc_hd__nor3b_2": 8,
+            "sky130_fd_sc_hd__nor4_2": 11,
+            "sky130_fd_sc_hd__nor4b_2": 2,
+            "sky130_fd_sc_hd__o2111a_2": 3,
+            "sky130_fd_sc_hd__o2111ai_2": 1,
+            "sky130_fd_sc_hd__o211a_2": 98,
+            "sky130_fd_sc_hd__o211ai_2": 52,
+            "sky130_fd_sc_hd__o21a_2": 80,
+            "sky130_fd_sc_hd__o21ai_2": 118,
+            "sky130_fd_sc_hd__o21ba_2": 58,
+            "sky130_fd_sc_hd__o21bai_2": 51,
+            "sky130_fd_sc_hd__o221a_2": 32,
+            "sky130_fd_sc_hd__o221ai_2": 4,
+            "sky130_fd_sc_hd__o22a_2": 17,
+            "sky130_fd_sc_hd__o22ai_2": 5,
+            "sky130_fd_sc_hd__o2bb2a_2": 28,
+            "sky130_fd_sc_hd__o311a_2": 2,
+            "sky130_fd_sc_hd__o31a_2": 15,
+            "sky130_fd_sc_hd__o31ai_2": 4,
+            "sky130_fd_sc_hd__o32a_2": 4,
+            "sky130_fd_sc_hd__o41a_2": 9,
+            "sky130_fd_sc_hd__o41ai_2": 1,
+            "sky130_fd_sc_hd__or2_2": 148,
+            "sky130_fd_sc_hd__or3_2": 93,
+            "sky130_fd_sc_hd__or3b_2": 11,
+            "sky130_fd_sc_hd__or4_2": 41,
+            "sky130_fd_sc_hd__or4b_2": 4,
+            "sky130_fd_sc_hd__or4bb_2": 4,
+            "sky130_fd_sc_hd__xnor2_2": 310,
+            "sky130_fd_sc_hd__xor2_2": 108
+         }
+      }
+}
+
+137. Printing statistics.
+
+=== ALU ===
+
+   Number of wires:               4924
+   Number of wire bits:           5017
+   Number of public wires:         364
+   Number of public wire bits:     457
+   Number of ports:                  9
+   Number of port bits:            102
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4949
+     sky130_fd_sc_hd__a2111o_2       5
+     sky130_fd_sc_hd__a211o_2       87
+     sky130_fd_sc_hd__a211oi_2      66
+     sky130_fd_sc_hd__a21bo_2       74
+     sky130_fd_sc_hd__a21boi_2      14
+     sky130_fd_sc_hd__a21o_2       272
+     sky130_fd_sc_hd__a21oi_2      171
+     sky130_fd_sc_hd__a221o_2       43
+     sky130_fd_sc_hd__a221oi_2       6
+     sky130_fd_sc_hd__a22o_2       103
+     sky130_fd_sc_hd__a22oi_2      133
+     sky130_fd_sc_hd__a2bb2o_2       7
+     sky130_fd_sc_hd__a2bb2oi_2      3
+     sky130_fd_sc_hd__a311o_2        6
+     sky130_fd_sc_hd__a311oi_2       2
+     sky130_fd_sc_hd__a31o_2        85
+     sky130_fd_sc_hd__a31oi_2       11
+     sky130_fd_sc_hd__a32o_2        10
+     sky130_fd_sc_hd__a32oi_2        1
+     sky130_fd_sc_hd__a41o_2         8
+     sky130_fd_sc_hd__a41oi_2        1
+     sky130_fd_sc_hd__and2_2       126
+     sky130_fd_sc_hd__and2b_2      121
+     sky130_fd_sc_hd__and3_2       176
+     sky130_fd_sc_hd__and3b_2        8
+     sky130_fd_sc_hd__and4_2       181
+     sky130_fd_sc_hd__and4b_2        7
+     sky130_fd_sc_hd__and4bb_2      28
+     sky130_fd_sc_hd__dfrtp_2      314
+     sky130_fd_sc_hd__inv_2        415
+     sky130_fd_sc_hd__mux2_1       122
+     sky130_fd_sc_hd__nand2_2      331
+     sky130_fd_sc_hd__nand2b_2      85
+     sky130_fd_sc_hd__nand3_2      198
+     sky130_fd_sc_hd__nand3b_2      16
+     sky130_fd_sc_hd__nand4_2       45
+     sky130_fd_sc_hd__nor2_2       304
+     sky130_fd_sc_hd__nor3_2        42
+     sky130_fd_sc_hd__nor3b_2        8
+     sky130_fd_sc_hd__nor4_2        11
+     sky130_fd_sc_hd__nor4b_2        2
+     sky130_fd_sc_hd__o2111a_2       3
+     sky130_fd_sc_hd__o2111ai_2      1
+     sky130_fd_sc_hd__o211a_2       98
+     sky130_fd_sc_hd__o211ai_2      52
+     sky130_fd_sc_hd__o21a_2        80
+     sky130_fd_sc_hd__o21ai_2      118
+     sky130_fd_sc_hd__o21ba_2       58
+     sky130_fd_sc_hd__o21bai_2      51
+     sky130_fd_sc_hd__o221a_2       32
+     sky130_fd_sc_hd__o221ai_2       4
+     sky130_fd_sc_hd__o22a_2        17
+     sky130_fd_sc_hd__o22ai_2        5
+     sky130_fd_sc_hd__o2bb2a_2      28
+     sky130_fd_sc_hd__o311a_2        2
+     sky130_fd_sc_hd__o31a_2        15
+     sky130_fd_sc_hd__o31ai_2        4
+     sky130_fd_sc_hd__o32a_2         4
+     sky130_fd_sc_hd__o41a_2         9
+     sky130_fd_sc_hd__o41ai_2        1
+     sky130_fd_sc_hd__or2_2        148
+     sky130_fd_sc_hd__or3_2         93
+     sky130_fd_sc_hd__or3b_2        11
+     sky130_fd_sc_hd__or4_2         41
+     sky130_fd_sc_hd__or4b_2         4
+     sky130_fd_sc_hd__or4bb_2        4
+     sky130_fd_sc_hd__xnor2_2      310
+     sky130_fd_sc_hd__xor2_2       108
+
+   Chip area for module '\ALU': 51012.675200
+     of which used for sequential elements: 8250.412800 (16.17%)
+
+138. Executing Verilog backend.
+Dumping module `\ALU'.
+
+139. Executing JSON backend.

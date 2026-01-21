@@ -1,0 +1,32 @@
+
+===========================================================================
+Violator List
+============================================================================
+[setup reg-reg] _14422_/Q -> _14499_/D : -0.476853
+[setup reg-reg] _14422_/Q -> _14518_/D : -0.425538
+[setup reg-reg] _14422_/Q -> _14519_/D : -0.373647
+[setup reg-reg] _14418_/Q -> _14522_/D : -0.350203
+[setup reg-reg] _14422_/Q -> _14528_/D : -0.348064
+[setup reg-reg] _14422_/Q -> _14524_/D : -0.275543
+[setup reg-reg] _14422_/Q -> _14513_/D : -0.252915
+[setup reg-reg] _14422_/Q -> _14509_/D : -0.252060
+[setup reg-reg] _14422_/Q -> _14514_/D : -0.250979
+[setup reg-reg] _14422_/Q -> _14527_/D : -0.248987
+[setup reg-reg] _14422_/Q -> _14521_/D : -0.241590
+[setup reg-reg] _14422_/Q -> _14526_/D : -0.234265
+[setup reg-reg] _14422_/Q -> _14529_/D : -0.221748
+[setup reg-reg] _14422_/Q -> _14530_/D : -0.214050
+[setup reg-reg] _14422_/Q -> _14517_/D : -0.182818
+[setup reg-reg] _14422_/Q -> _14516_/D : -0.116938
+[setup reg-reg] _14422_/Q -> _14523_/D : -0.109826
+[setup reg-reg] _14422_/Q -> _14512_/D : -0.100696
+[setup reg-reg] _14422_/Q -> _14520_/D : -0.087081
+[setup reg-reg] _14422_/Q -> _14525_/D : -0.081020
+[setup reg-reg] _14422_/Q -> _14507_/D : -0.037129
+[setup reg-reg] _14418_/Q -> _14503_/D : -0.036538
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_1v80: 0
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_1v80: 0.315457
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_1v80: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_1v80: 22
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_1v80: -0.476853
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_1v80: 22

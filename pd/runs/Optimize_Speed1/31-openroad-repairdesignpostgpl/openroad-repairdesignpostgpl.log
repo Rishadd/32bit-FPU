@@ -1,0 +1,134 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/27-openroad-globalplacement/ALU.odb'…
+Reading design constraints file at '/nix/store/ifgrnqkf6pcsk2qzdn5bai2rvd4skbbc-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 1.6
+[INFO] Setting input delay to: 1.6
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO RSZ-0027] Inserted 67 input buffers.
+[INFO RSZ-0028] Inserted 34 output buffers.
+[INFO RSZ-0058] Using max wire length 6335um.
+Iteration | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------
+        0 |       0 |       0 |             0 |      7662
+      100 |     102 |      13 |             3 |      7562
+      200 |     190 |      17 |             6 |      7462
+      300 |     299 |      47 |            10 |      7362
+      400 |     379 |      56 |            14 |      7262
+      500 |     470 |      67 |            22 |      7162
+      600 |     558 |      71 |            28 |      7062
+      700 |     634 |      71 |            38 |      6962
+      800 |     723 |      73 |            42 |      6862
+      900 |     806 |      79 |            58 |      6762
+     1000 |     898 |      88 |            68 |      6662
+     1100 |     983 |      94 |            75 |      6562
+     1200 |    1071 |      98 |            77 |      6462
+     1300 |    1154 |     105 |            83 |      6362
+     1400 |    1237 |     110 |           120 |      6262
+     1500 |    1321 |     111 |           121 |      6162
+     1600 |    1430 |     143 |           156 |      6062
+     1700 |    1505 |     149 |           159 |      5962
+     1800 |    1629 |     221 |           170 |      5862
+     1900 |    1718 |     229 |           175 |      5762
+     2000 |    1806 |     242 |           180 |      5662
+     2100 |    1887 |     251 |           187 |      5562
+     2200 |    1988 |     280 |           199 |      5462
+     2300 |    2070 |     290 |           207 |      5362
+     2400 |    2154 |     311 |           224 |      5262
+     2500 |    2244 |     317 |           242 |      5162
+     2600 |    2338 |     333 |           254 |      5062
+     2700 |    2427 |     341 |           258 |      4962
+     2800 |    2499 |     344 |           271 |      4862
+     2900 |    2581 |     350 |           275 |      4762
+     3000 |    2668 |     365 |           286 |      4662
+     3100 |    2758 |     377 |           295 |      4562
+     3200 |    2892 |     457 |           305 |      4462
+     3300 |    2989 |     488 |           324 |      4362
+     3400 |    3067 |     496 |           330 |      4262
+     3500 |    3154 |     505 |           335 |      4162
+     3600 |    3237 |     506 |           336 |      4062
+     3700 |    3321 |     506 |           336 |      3962
+     3800 |    3401 |     507 |           337 |      3862
+     3900 |    3479 |     507 |           337 |      3762
+     4000 |    3570 |     515 |           343 |      3662
+     4100 |    3666 |     528 |           351 |      3562
+     4200 |    3750 |     552 |           369 |      3462
+     4300 |    3840 |     578 |           393 |      3362
+     4400 |    3923 |     604 |           413 |      3262
+     4500 |    4011 |     605 |           414 |      3162
+     4600 |    4109 |     608 |           415 |      3062
+     4700 |    4185 |     609 |           416 |      2962
+     4800 |    4276 |     610 |           417 |      2862
+     4900 |    4357 |     610 |           417 |      2762
+     5000 |    4440 |     611 |           418 |      2662
+     5100 |    4525 |     615 |           422 |      2562
+     5200 |    4626 |     644 |           432 |      2462
+     5300 |    4742 |     693 |           446 |      2362
+     5400 |    4825 |     698 |           451 |      2262
+     5500 |    4918 |     707 |           458 |      2162
+     5600 |    5011 |     719 |           467 |      2062
+     5700 |    5101 |     721 |           470 |      1962
+     5800 |    5185 |     728 |           477 |      1862
+     5900 |    5246 |     733 |           480 |      1762
+     6000 |    5358 |     763 |           498 |      1662
+     6100 |    5439 |     765 |           521 |      1562
+     6200 |    5532 |     780 |           552 |      1462
+     6300 |    5619 |     795 |           571 |      1362
+     6400 |    5703 |     803 |           591 |      1262
+     6500 |    5792 |     808 |           606 |      1162
+     6600 |    5897 |     841 |           627 |      1062
+     6700 |    6014 |     890 |           645 |       962
+     6800 |    6132 |     945 |           662 |       862
+     6900 |    6354 |    1170 |           704 |       762
+     7000 |    6454 |    1170 |           704 |       662
+     7100 |    7041 |    1987 |           757 |       562
+     7200 |    7554 |    2700 |           804 |       462
+     7300 |    7568 |    2700 |           890 |       362
+     7400 |    7568 |    2700 |           990 |       262
+     7500 |    7568 |    2700 |          1090 |       162
+     7600 |    7713 |    2817 |          1119 |        62
+    final |    7713 |    2817 |          1119 |         0
+---------------------------------------------------------
+[INFO RSZ-0034] Found 571 slew violations.
+[INFO RSZ-0035] Found 557 fanout violations.
+[INFO RSZ-0038] Inserted 2817 buffers in 1119 nets.
+[INFO RSZ-0039] Resized 7713 instances.
+Placement Analysis
+---------------------------------
+total displacement      31361.0 u
+average displacement        2.4 u
+max displacement           19.9 u
+original HPWL          263929.1 u
+legalized HPWL         290173.8 u
+delta HPWL                   10 %
+
+[INFO DPL-0020] Mirrored 5068 instances
+[INFO DPL-0021] HPWL before          290173.8 u
+[INFO DPL-0022] HPWL after           282733.4 u
+[INFO DPL-0023] HPWL delta               -2.6 %
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               286    1073.53
+  Tap cell                               2175    2721.36
+  Timing Repair Buffer                   2918   16368.20
+  Inverter                                448    1681.61
+  Sequential cell                         314    7867.55
+  Multi-Input combinational cell         6731   54205.74
+  Total                                 12872   83917.98
+Writing OpenROAD database to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/31-openroad-repairdesignpostgpl/ALU.odb'…
+Writing netlist to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/31-openroad-repairdesignpostgpl/ALU.nl.v'…
+Writing powered netlist to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/31-openroad-repairdesignpostgpl/ALU.pnl.v'…
+Writing layout to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/31-openroad-repairdesignpostgpl/ALU.def'…
+Writing timing constraints to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/31-openroad-repairdesignpostgpl/ALU.sdc'…

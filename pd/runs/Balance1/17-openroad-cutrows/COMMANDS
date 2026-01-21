@@ -1,0 +1,1 @@
+openroad -exit -no_splash -metrics /mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-41/17-openroad-cutrows/or_metrics_out.json /nix/store/ifgrnqkf6pcsk2qzdn5bai2rvd4skbbc-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/openroad/cut_rows.tcl

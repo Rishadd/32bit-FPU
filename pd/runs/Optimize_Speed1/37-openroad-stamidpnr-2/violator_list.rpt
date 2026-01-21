@@ -1,0 +1,33 @@
+
+===========================================================================
+Violator List
+============================================================================
+[setup reg-reg] _14380_/Q -> _14499_/D : -0.480994
+[setup reg-reg] _14380_/Q -> _14518_/D : -0.430339
+[setup reg-reg] _14380_/Q -> _14522_/D : -0.415520
+[setup reg-reg] _14380_/Q -> _14519_/D : -0.395961
+[setup reg-reg] _14380_/Q -> _14528_/D : -0.359841
+[setup reg-reg] _14380_/Q -> _14524_/D : -0.316465
+[setup reg-reg] _14380_/Q -> _14521_/D : -0.280905
+[setup reg-reg] _14380_/Q -> _14513_/D : -0.280507
+[setup reg-reg] _14380_/Q -> _14514_/D : -0.280035
+[setup reg-reg] _14380_/Q -> _14526_/D : -0.275452
+[setup reg-reg] _14380_/Q -> _14529_/D : -0.274072
+[setup reg-reg] _14380_/Q -> _14527_/D : -0.269661
+[setup reg-reg] _14380_/Q -> _14509_/D : -0.259941
+[setup reg-reg] _14380_/Q -> _14530_/D : -0.246474
+[setup reg-reg] _14380_/Q -> _14517_/D : -0.227355
+[setup reg-reg] _14380_/Q -> _14516_/D : -0.160879
+[setup reg-reg] _14380_/Q -> _14523_/D : -0.152157
+[setup reg-reg] _14380_/Q -> _14525_/D : -0.142669
+[setup reg-reg] _14408_/Q -> _14359_/D : -0.138868
+[setup reg-reg] _14380_/Q -> _14512_/D : -0.134341
+[setup reg-reg] _14380_/Q -> _14507_/D : -0.062237
+[setup reg-reg] _14380_/Q -> _14520_/D : -0.059537
+[setup reg-reg] _14408_/Q -> _14360_/D : -0.031453
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_1v80: 0
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_1v80: 0.298538
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_1v80: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_1v80: 23
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_1v80: -0.480994
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_1v80: 23

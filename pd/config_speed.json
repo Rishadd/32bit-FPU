@@ -1,0 +1,10 @@
+{
+    "DESIGN_NAME": "ALU",
+    "VERILOG_FILES": ["dir::*.v"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 8.0, 
+    "SYNTH_STRATEGY": "DELAY 1",
+    "SYNTH_MAX_FANOUT": 5,
+    "PL_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true
+}

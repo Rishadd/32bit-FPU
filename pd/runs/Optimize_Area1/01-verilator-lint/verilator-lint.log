@@ -1,0 +1,14 @@
+%Warning-WIDTHEXPAND: /mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:396:45: Operator ADD expects 24 bits on the RHS, but RHS's VARREF 'round_up' generates 1 bits.
+                                                                : ... note: In instance 'ALU.multiplier_inst'
+  396 | assign man_rounded = product_shifted[47:24] + round_up;
+      |                                             ^
+                      ... For warning description see https://verilator.org/warn/WIDTHEXPAND?v=5.018
+                      ... Use "/* verilator lint_off WIDTHEXPAND */" and lint_on around source to disable this message.
+%Warning-UNUSEDSIGNAL: /mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:174:13: Signal is not used: 'op_add_sub'
+                                                                 : ... note: In instance 'ALU.adder_inst'
+  174 | wire        op_add_sub;   
+      |             ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /mnt/c/Data/IEEE/32Bit-ALU/pd/ALU.v:221:13: Bits of signal are not used: 'man_norm'[23]
+                                                                 : ... note: In instance 'ALU.adder_inst'
+  221 | reg  [23:0] man_norm;
+      |             ^~~~~~~~

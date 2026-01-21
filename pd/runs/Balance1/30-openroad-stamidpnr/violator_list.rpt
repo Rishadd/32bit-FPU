@@ -1,0 +1,76 @@
+
+===========================================================================
+Violator List
+============================================================================
+[hold in-reg] opcode -> _9262_/D : -0.153420
+[hold in-reg] i_a[31] -> _9229_/D : -0.141059
+[hold in-reg] i_b[31] -> _9261_/D : -0.138554
+[hold in-reg] i_a[23] -> _9221_/D : -0.135386
+[hold in-reg] i_a[24] -> _9222_/D : -0.135117
+[hold in-reg] i_a[26] -> _9224_/D : -0.134190
+[hold in-reg] i_vld -> _9197_/D : -0.131897
+[hold in-reg] i_a[27] -> _9225_/D : -0.130844
+[hold in-reg] i_a[29] -> _9227_/D : -0.128238
+[hold in-reg] i_a[25] -> _9223_/D : -0.128170
+[hold in-reg] i_a[28] -> _9226_/D : -0.127862
+[hold in-reg] i_b[27] -> _9257_/D : -0.125382
+[hold in-reg] i_b[29] -> _9259_/D : -0.121920
+[hold in-reg] i_a[30] -> _9228_/D : -0.120605
+[hold in-reg] i_b[30] -> _9260_/D : -0.119877
+[hold in-reg] i_b[28] -> _9258_/D : -0.119441
+[hold in-reg] i_b[23] -> _9253_/D : -0.116162
+[hold in-reg] i_b[24] -> _9254_/D : -0.113757
+[hold in-reg] i_b[26] -> _9256_/D : -0.112516
+[hold in-reg] i_b[25] -> _9255_/D : -0.112063
+[hold in-reg] i_a[13] -> _9211_/D : -0.107542
+[hold in-reg] i_a[11] -> _9209_/D : -0.105725
+[hold in-reg] i_a[6] -> _9204_/D : -0.099631
+[hold in-reg] i_b[2] -> _9232_/D : -0.099453
+[hold in-reg] i_b[0] -> _9230_/D : -0.098964
+[hold in-reg] i_a[3] -> _9201_/D : -0.098621
+[hold in-reg] i_b[3] -> _9233_/D : -0.098370
+[hold in-reg] i_a[2] -> _9200_/D : -0.098189
+[hold in-reg] i_b[5] -> _9235_/D : -0.097974
+[hold in-reg] i_a[0] -> _9198_/D : -0.097971
+[hold in-reg] i_b[14] -> _9244_/D : -0.097817
+[hold in-reg] i_a[5] -> _9203_/D : -0.097647
+[hold in-reg] i_a[1] -> _9199_/D : -0.097086
+[hold in-reg] i_b[7] -> _9237_/D : -0.097074
+[hold in-reg] i_b[11] -> _9241_/D : -0.097055
+[hold in-reg] i_a[4] -> _9202_/D : -0.096938
+[hold in-reg] i_b[8] -> _9238_/D : -0.096824
+[hold in-reg] i_b[1] -> _9231_/D : -0.096650
+[hold in-reg] i_b[13] -> _9243_/D : -0.096413
+[hold in-reg] i_a[10] -> _9208_/D : -0.096076
+[hold in-reg] i_b[4] -> _9234_/D : -0.095645
+[hold in-reg] i_a[15] -> _9213_/D : -0.095319
+[hold in-reg] i_a[12] -> _9210_/D : -0.095094
+[hold in-reg] i_a[9] -> _9207_/D : -0.094920
+[hold in-reg] i_a[8] -> _9206_/D : -0.094873
+[hold in-reg] i_b[10] -> _9240_/D : -0.094721
+[hold in-reg] i_a[7] -> _9205_/D : -0.094281
+[hold in-reg] i_b[6] -> _9236_/D : -0.094210
+[hold in-reg] i_b[22] -> _9252_/D : -0.093866
+[hold in-reg] i_b[21] -> _9251_/D : -0.093584
+[hold in-reg] i_b[18] -> _9248_/D : -0.092674
+[hold in-reg] i_b[9] -> _9239_/D : -0.092017
+[hold in-reg] i_b[15] -> _9245_/D : -0.091647
+[hold in-reg] i_b[12] -> _9242_/D : -0.091601
+[hold in-reg] i_a[18] -> _9216_/D : -0.091462
+[hold in-reg] i_b[17] -> _9247_/D : -0.091174
+[hold in-reg] i_a[20] -> _9218_/D : -0.090580
+[hold in-reg] i_a[19] -> _9217_/D : -0.089800
+[hold in-reg] i_a[21] -> _9219_/D : -0.089788
+[hold in-reg] i_a[22] -> _9220_/D : -0.089045
+[hold in-reg] i_a[17] -> _9215_/D : -0.088260
+[hold in-reg] i_a[14] -> _9212_/D : -0.087758
+[hold in-reg] i_a[16] -> _9214_/D : -0.087377
+[hold in-reg] i_b[16] -> _9246_/D : -0.085155
+[hold in-reg] i_b[19] -> _9249_/D : -0.083417
+[hold in-reg] i_b[20] -> _9250_/D : -0.082761
+Writing metric timing__hold_vio__count__corner:nom_tt_025C_1v80: 66
+Writing metric timing__hold_r2r__ws__corner:nom_tt_025C_1v80: 0.249042
+Writing metric timing__hold_r2r_vio__count__corner:nom_tt_025C_1v80: 0
+Writing metric timing__setup_vio__count__corner:nom_tt_025C_1v80: 0
+Writing metric timing__setup_r2r__ws__corner:nom_tt_025C_1v80: 3.412843
+Writing metric timing__setup_r2r_vio__count__corner:nom_tt_025C_1v80: 0

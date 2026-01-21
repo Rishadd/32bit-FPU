@@ -1,0 +1,9 @@
+{
+    "DESIGN_NAME": "ALU",
+    "VERILOG_FILES": ["dir::*.v"],
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 15.0,
+    "FP_CORE_UTIL": 35,
+    "PL_TARGET_DENSITY": 0.40,
+    "DIODE_INSERTION_STRATEGY": 4
+}

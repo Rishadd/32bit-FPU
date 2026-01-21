@@ -1,0 +1,100 @@
+Reading OpenROAD database at '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/20-openroad-generatepdn/ALU.odb'…
+Reading library file at '/home/diddy/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading design constraints file at '/nix/store/ifgrnqkf6pcsk2qzdn5bai2rvd4skbbc-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 1.6
+[INFO] Setting input delay to: 1.6
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
++ global_placement -density 0.6215550000000001 -skip_io -pad_right 0 -pad_left 0 -init_wirelength_coef 0.25
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  5.520 10.880 ) ( 396.520 399.840 ) um
+[INFO GPL-0006] NumInstances:              9954
+[INFO GPL-0007] NumPlaceInstances:         7493
+[INFO GPL-0008] NumFixedInstances:         2461
+[INFO GPL-0009] NumDummyInstances:            0
+[INFO GPL-0010] NumNets:                   7561
+[INFO GPL-0011] NumPins:                  30793
+[INFO GPL-0012] DieBBox:  (  0.000  0.000 ) ( 402.445 413.165 ) um
+[INFO GPL-0013] CoreBBox: (  5.520 10.880 ) ( 396.520 399.840 ) um
+[INFO GPL-0016] CoreArea:            152083.360 um^2
+[INFO GPL-0017] NonPlaceInstsArea:     3794.890 um^2
+[INFO GPL-0018] PlaceInstsArea:       76598.464 um^2
+[INFO GPL-0019] Util:                    51.655 %
+[INFO GPL-0020] StdInstsArea:         76598.464 um^2
+[INFO GPL-0021] MacroInstsArea:           0.000 um^2
+[INFO GPL-0031] FillerInit:NumGCells:      9085
+[INFO GPL-0032] FillerInit:NumGNets:       7561
+[INFO GPL-0033] FillerInit:NumGPins:      30793
+[INFO GPL-0023] TargetDensity:            0.622
+[INFO GPL-0024] AvrgPlaceInstArea:       10.223 um^2
+[INFO GPL-0025] IdealBinArea:            16.447 um^2
+[INFO GPL-0026] IdealBinCnt:               9246
+[INFO GPL-0027] TotalBinArea:        152083.360 um^2
+[INFO GPL-0028] BinCnt:        64     64
+[INFO GPL-0029] BinSize: (  6.110  6.078 )
+[INFO GPL-0030] NumBins: 4096
+[NesterovSolve] Iter:    1 overflow: 0.999 HPWL: 20671257
+[NesterovSolve] Iter:   10 overflow: 0.997 HPWL: 13195938
+[NesterovSolve] Iter:   20 overflow: 0.996 HPWL: 12698091
+[NesterovSolve] Iter:   30 overflow: 0.996 HPWL: 12446179
+[NesterovSolve] Iter:   40 overflow: 0.996 HPWL: 12327772
+[NesterovSolve] Iter:   50 overflow: 0.996 HPWL: 12269103
+[NesterovSolve] Iter:   60 overflow: 0.996 HPWL: 12238875
+[NesterovSolve] Iter:   70 overflow: 0.996 HPWL: 12227034
+[NesterovSolve] Iter:   80 overflow: 0.996 HPWL: 12221481
+[NesterovSolve] Iter:   90 overflow: 0.996 HPWL: 12235599
+[NesterovSolve] Iter:  100 overflow: 0.995 HPWL: 12314701
+[NesterovSolve] Iter:  110 overflow: 0.994 HPWL: 12567634
+[NesterovSolve] Iter:  120 overflow: 0.992 HPWL: 13430508
+[NesterovSolve] Iter:  130 overflow: 0.989 HPWL: 15736950
+[NesterovSolve] Iter:  140 overflow: 0.985 HPWL: 20077004
+[NesterovSolve] Iter:  150 overflow: 0.977 HPWL: 25577710
+[NesterovSolve] Iter:  160 overflow: 0.967 HPWL: 30676609
+[NesterovSolve] Iter:  170 overflow: 0.955 HPWL: 35919148
+[NesterovSolve] Iter:  180 overflow: 0.937 HPWL: 41985498
+[NesterovSolve] Iter:  190 overflow: 0.916 HPWL: 49267142
+[NesterovSolve] Iter:  200 overflow: 0.889 HPWL: 58290284
+[NesterovSolve] Iter:  210 overflow: 0.859 HPWL: 68167803
+[NesterovSolve] Iter:  220 overflow: 0.824 HPWL: 78461690
+[NesterovSolve] Iter:  230 overflow: 0.789 HPWL: 87836624
+[NesterovSolve] Iter:  240 overflow: 0.746 HPWL: 96167249
+[NesterovSolve] Iter:  250 overflow: 0.703 HPWL: 104767972
+[NesterovSolve] Iter:  260 overflow: 0.652 HPWL: 113849894
+[NesterovSolve] Iter:  270 overflow: 0.605 HPWL: 120734818
+[NesterovSolve] Iter:  280 overflow: 0.556 HPWL: 128122134
+[NesterovSolve] Iter:  290 overflow: 0.506 HPWL: 136099564
+[NesterovSolve] Iter:  300 overflow: 0.461 HPWL: 142007706
+[NesterovSolve] Iter:  310 overflow: 0.431 HPWL: 146083654
+[NesterovSolve] Iter:  320 overflow: 0.389 HPWL: 148150265
+[NesterovSolve] Iter:  330 overflow: 0.346 HPWL: 151519016
+[NesterovSolve] Iter:  340 overflow: 0.320 HPWL: 152577372
+[NesterovSolve] Iter:  350 overflow: 0.287 HPWL: 153502629
+[NesterovSolve] Iter:  360 overflow: 0.262 HPWL: 154588807
+[NesterovSolve] Iter:  370 overflow: 0.238 HPWL: 155339163
+[NesterovSolve] Iter:  380 overflow: 0.215 HPWL: 156253957
+[NesterovSolve] Iter:  390 overflow: 0.194 HPWL: 156950695
+[NesterovSolve] Iter:  400 overflow: 0.172 HPWL: 157634189
+[NesterovSolve] Iter:  410 overflow: 0.149 HPWL: 158314210
+[NesterovSolve] Iter:  420 overflow: 0.129 HPWL: 159028727
+[NesterovSolve] Iter:  430 overflow: 0.111 HPWL: 159841672
+[NesterovSolve] Finished with Overflow: 0.099733
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                               286    1073.53
+  Tap cell                               2175    2721.36
+  Inverter                                448    1681.61
+  Sequential cell                         314    8250.41
+  Multi-Input combinational cell         6731   66666.44
+  Total                                  9954   80393.35
+Writing OpenROAD database to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/23-openroad-globalplacementskipio/ALU.odb'…
+Writing netlist to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/23-openroad-globalplacementskipio/ALU.nl.v'…
+Writing powered netlist to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/23-openroad-globalplacementskipio/ALU.pnl.v'…
+Writing layout to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/23-openroad-globalplacementskipio/ALU.def'…
+Writing timing constraints to '/mnt/c/Data/IEEE/32Bit-ALU/pd/runs/RUN_2026-01-21_11-02-27/23-openroad-globalplacementskipio/ALU.sdc'…
