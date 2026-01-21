@@ -1,4 +1,4 @@
-\# IEEE 754 Floating Point Unit (FPU)
+# IEEE 754 Floating Point Unit (FPU)
 
 
 
@@ -6,15 +6,15 @@ This project implements a 32-bit (single precision) IEEE 754-compliant Floating 
 
 
 
-\## Features
+## Features
 
 
 
-\- IEEE 754 single-precision floating-point compliance
+- IEEE 754 single-precision floating-point compliance
 
-\- Supports addition, subtraction, and multiplication
+- Supports addition, subtraction, and multiplication
 
-\- Handles special cases:
+- Handles special cases:
 
 &nbsp; - NaN (Not a Number)
 
@@ -24,35 +24,20 @@ This project implements a 32-bit (single precision) IEEE 754-compliant Floating 
 
 &nbsp; - Denormalized numbers
 
-\- Modular design for scalability and testing
+- Modular design for scalability and testing
 
-\- Easily synthesizable with tools like Vivado and simulatable with ModelSim
+- Easily synthesizable with tools like Vivado and simulatable with ModelSim
 
 
 
-\## Operation Mode
+## Operation Mode
 
 
 
 The top-level module `alu.v` takes a 1-bit `opcode`:
 
-\- `opcode = 0` → perform addition/subtraction
+- `opcode = 0` → perform addition/subtraction
 
-\- `opcode = 1` → perform multiplication
-
-
-
-\## Testbenches
-
-
-
-Each major module includes a dedicated testbench:
-
-\- `tb\_adder\_32bit.v`: Includes test cases for addition, subtraction, and edge cases (NaN, inf, etc.)
-
-\- `tb\_multiplier\_32bit.v`: Covers regular and special multiplication cases
-
-\- `tb\_alu.v`: Verifies the whole ALU with control signal
-
+- `opcode = 1` → perform multiplication
 
 
